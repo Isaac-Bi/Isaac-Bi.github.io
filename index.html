@@ -1,13 +1,78 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
         <title>Portfolio Website | Isaac Bi</title>
-        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        
+         <!-- Description for Website -->
+        <meta name="description" content="This website is a Portfolio of Isaac Bi's resume and experience in web design">
+
+        <!-- Main style sheet -->
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Raleway:300">
+    
+        <!-- Bootstrap.css -->
+        <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css">
+     
+        <!-- Scrolling Navbar -->
+        <link type="text/css" rel="stylesheet" href="assets/css/scrolling-nav.css">
     </head>
 
-    <body>
-        <h1>You matter bro</h1>
+    <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+    <body id="page-top" data-spy="scroll" data-target=".navbar fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <!-- container div -->
+            <div class="container">
+              <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Tiisetso Mphuthi</a>
+              </div>
+             
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse navbar-ex1-collapse">
+                      <ul class="nav navbar-nav">
+                          <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                          <li class="hidden">
+                              <a class="page-scroll" href="#page-top"></a>
+                          </li>
+                          <li>
+                              <a class="page-scroll" href="#bio">About</a>
+                          </li>
+                          <li>
+                              <a class="page-scroll" href="#resume">Services</a>
+                          </li>
+                          <li>
+                              <a class="page-scroll" href="#contact">Contact</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <!-- /.navbar-collapse -->
+              
+            </div>
+            <!--/ container -->
+            
+          </nav>
+          
+          
+          <!-- Jquery -->
+          <script type="text/javascript" src="assets/js/jquery.js"></script>
+          
+          <!-- Bootstrap core js -->
+          <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+          
+          <!--Scrolling Nav Javascript -->
+          <script type="text/javascript" src="assets/js/jquery.easing.min.js"></script>
+          <script type="text/javascript" src="assets/js/scrolling-nav.js"></script>
     </body>
 </html>
 
