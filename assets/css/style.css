@@ -1,0 +1,56 @@
+body {
+    font-size: 1.8rem;
+    font-family: "Open Sans", sans-serif;
+    color: #383838;
+    background-color: #f8F8f8;
+}
+
+h1 {
+    padding-top: 10rem;
+    font-weight: 600;
+}
+
+.intro-section p {
+    padding-top: 1.6rem;
+    text-align: left;
+    font-size: 1.2rem;
+    overflow: hidden;
+}
+
+.navbar {
+    background-color: #172634!important;
+    height: 3.5rem;
+}
+
+/* :hover remember to use hovers for your project showcase to add a 50% opacity*/
+.navbar .navbar-brand{
+    color: #fff !important;
+    margin-left: 1.0rem;
+    font-family: "Open Sans", sans-serif; 
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.navbar .nav-item{
+    color: #fff !important;
+    font-family: "Open Sans", sans-serif; 
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-right: 1.2rem;
+}
+
+.rounded {
+    border-radius: 15% !important;
+}
+
+.col {
+    margin-left: 1.0rem;
+}
+
+.img-fluid {
+    width: 100% !important;
+}
+
+.project-section img:hover{
+    opacity: 0.5;
+}
