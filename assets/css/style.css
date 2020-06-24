@@ -3,6 +3,10 @@ body {
     font-family: "Open Sans", sans-serif;
     color: #383838;
     background-color: #f8F8f8;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+    height: 100%; 
+    position: relative;
 }
 
 h1 {
@@ -10,11 +14,31 @@ h1 {
     font-weight: 600;
 }
 
+h2 {
+    font-weight: 600;
+    font-size: 1.0rem;
+    text-align: left;
+}
+
+.intro-section {
+	display:block;
+	margin:auto;
+}
+
 .intro-section p {
-    padding-top: 1.6rem;
     text-align: left;
     font-size: 1.2rem;
     overflow: hidden;
+}
+
+.project-section {
+    display:block;
+    margin:auto;
+    padding-top: 1.6rem;
+}
+
+.project-section img:hover{
+    opacity: 0.5;
 }
 
 .navbar {
@@ -51,6 +75,13 @@ h1 {
     width: 100% !important;
 }
 
-.project-section img:hover{
-    opacity: 0.5;
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding-top: 50px;
+}
+
+footer p {
+    text-align: center !important;
 }
