@@ -1,99 +1,151 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Profile Website | Isaac Bi</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- Keywords used in the website -->
-    <meta name="keywords" content="Software developer, Physics, University of California San Diego, Android developer, Web developer, 
-    User Interface, User Experience developer, San Diego, ">
-    
-    <!-- Description for Website -->
-    <meta name="description" content="Isaac Bi is a Software Developer and IT Technician attending the University of California San Diego">
-    
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Raleway:300">
-    
-   <!-- Bootstrap.css -->
-    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css">
-    
-    <!-- Scrolling Navbar -->
-    <link type="text/css" rel="stylesheet" href="assets/css/scrolling-nav.css">
-    
-    <!-- Main style sheet-->
-    <link type="text/css" rel="stylesheet" href="assets/css/style.css">
-  </head>
-  <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
-  <body>
-    
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light " style="background-color: #e3f2fd;"> 
-      <a class="navbar-brand" href="#">Isaac Bi | Portfolio</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="aboutme.html">About Me</a>
-          <a class="nav-item nav-link" href="mailto:ibi@ucsd.edu">Contact</a>
-          <a class="nav-item nav-link" href="assets/Isaac's Resume.pdf">Resume/CV</a>
-        </div>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="Isaac Bi's Portfolio Website" />
+	<meta name="keywords" content="HTML, CSS, JavaScript" />
+	<meta name="author" content="Isaac Bi" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!--  External Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css"> 
+
+  <!-- Google fonts -->
+  <!--<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">-->
+
+  <title>Isaac Bi</title>
+</head>
+
+<body>  
+  <section class="banner">
+    <header>
+      <nav>
+        <a href="index.html">Home</a> 
+        <a href="mailto: isaacb836@gmail.com">Contact Me</a> 
+        <a href="assets/resume.pdf">Resume<img class="icon" src="assets/images/icons/file.svg" alt="pdf file"></a> 
+      </nav>  
+    </header>
+
+    <a href="#project_heading" class="view_button">View My Projects</a>
+  </section>
+
+  <div class="content_wrapper">
+  <main>
+  <h3 id="project_heading">My Projects</h3>
+  <hr>
+  <!-- Project section -->
+  <section id="projects" class="projects">
+    <!-- Individual projects with headers -->
+      <div class="piggybank">
+        <h3>Piggybank</h3>   
+        <a href="https://github.com/Isaac-Bi/CSE110">
+          <picture>
+            <source media="(min-width:600px)" srcset="assets/images/piggybank.png">
+            <img src="assets/images/mobile/piggybankmob.png" alt = "Piggybank app logo">
+          </picture>
+        </a>
       </div>
-    </nav>
-    
-    <!-- Intro Section -->
-    <section id="intro" class="intro-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md">
-                    <h1>Hello, I'm Isaac Bi!</h1>
-                  <p>I'm a Front-end Developer and Software Engineer currently working in IT. Everything I strive to make is designed with people in mind, and also a love for great
-                    aesthetic.
-                  </p>
-                </div>
-                <div class="col-md">
-                  <img src="assets/images/me.jpg" class="rounded img-fluid" alt="Picture of Me!"> 
-                </div>
-            </div>
+      <div class="chronos">
+        <h3>Chronos Redesign</h3>
+        <a href="https://github.com/Isaac-Bi">
+          <picture>
+            <source media="(min-width:600px)" srcset="assets/images/chronos.jpg">
+            <img src="assets/images/mobile/chronosmob.jpg" alt = "Chronos website splashpage">
+          </picture>
+        </a>
+      </div>
+      <div class="covid">
+        <h3>COVID Risk Factor App</h3>
+        <a href="https://github.com/Isaac-Bi/quarantine-app">
+          <picture>
+            <source media="(min-width:600px)" srcset="assets/images/covid19.png">
+            <img src="assets/images/mobile/covid19mob.png" alt = "Covid-19 Risk Factor Test page">
+          </picture>
+        </a>
+      </div>
+  </section>
 
-            <h2>Projects</h2>
-            <hr/>
-            <!-- Projects -->
-            <section id="projects" class="project-section">
-              <div class="row">
-                <div class ="col-md-4 shadow chronos" ><a href="chronos.html"><img src="assets/images/chronos.png" class="img-fluid" alt="Chronos Project"></a> </div>
-                <div class ="col-md-4 shadow piggybank"><a href="piggybank.html"><img src="assets/images/piggybank.png" class="img-fluid" alt="PiggyBank Project"></a> </div>
-                <div class ="col-md-4 shadow wip"><a href="#wip"><img src="assets/images/wip.png" class="img-fluid" alt="Work in Progress"></a></div>
-              </div>
-            </section>
-            
-            <!-- Footer -->
-            <div class = "row">
-            <footer>
-              <div class="text-center blue-grey lighten-5">
-                  <p>Author: Isaac Bi</p>
-                  <a href="mailto:ibi@ucsd.edu">ibi@ucsd.edu</a>
-              </div>
-            </footer> 
-          </div>
+  <h2 id="biography_heading">Biography</h2>
+  <hr>
+  <section class="biography">
+    <div>
+      <h3>Education and Experience</h3>
+      <picture>
+      <source media="(min-width:600px)" srcset="assets/images/warren.jpg">
+      <img src="assets/images/mobile/warrenmobile.jpg" alt="Balcony photograph of Warren College">
+      </picture>
+    </div>
+    <p> 
+      I attend the University of California, San Diego pursuing a B.S in Computer Science. I'll be graduating in Spring of 2022. I have been working part time at my University's IT Service Desk since the start of my 
+      freshman year. I specialize in Front-End development and UI design, however I'm not afraid to get my hands dirty with nitty gritty frameworks, algorithms, and back-end software. 
+    </p>
+  </section>
 
-        </div>
-    </section>
+  <section class="biography">
+    <div>
+      <h3>Hobbies and Interests</h3>
+      <picture>
+        <source media="(min-width:600px)" srcset="assets/images/cliffs.jpg">
+        <img src="assets/images/mobile/cliffsmobile.jpg" alt="Landscape shot of La Jolla Cliffs">
+      </picture>
+    </div>
+    <p> 
+      I've been on the stage for a variety of reasons, whether it be for public speaking competitions, orchestral concerts, or theatrical productions, I simply love diving head first into anything that lets me show
+      off. The diversity of my interests has caused me to wear many hats. I'm a classically trained musician with a love for Jazz improvisation, I'm an excellent orator and debater (with a cheeky sense of humor), 
+      and I'm determined to earn a hat for artistic talent too later in my life. 
+    </p>
+  </section>
+
+  <section class="biography">
+    <div>
+      <h3>How are you managing during the pandemic?</h3>
+      <picture>
+        <source media="(min-width:600px)" srcset="assets/images/shanghai.jpg">
+        <img src="assets/images/mobile/shanghaimobile.jpg" alt="Image of Shanghai shopping center">
+      </picture>
+    </div>
+    <p> 
+      I've always thrived on consistent routines, so for me the pandemic hasn't been all too bad. Every morning is pretty much the same, but that also means I'm never really surprised by anything crazy. 
+      Keeping myself busy has been the main goal, and with my job and constant flow of CS assignments, keeping busy hasn't been difficult at all. 
+    </p>
+</section>
 
 
-    
-    <!-- Jquery -->
-    <script type="text/javascript" src="assets/js/jquery.js"></script>
-    
-    <!-- Bootstrap core js -->
-    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-    
-    <!--Scrolling Nav Javascript -->
-    <script type="text/javascript" src="assets/js/jquery.easing.min.js"></script>
-    <script type="text/javascript" src="assets/js/scrolling-nav.js"></script>
+<!-- Skills Section-->
+<h2>Skills</h2>
+<hr>
+<section class="skills">
+  <div>
+    <h3>Coding languages</h3> 
+    <p>C, C++, Java, Python, HTML, CSS, PHP, MySQL, JavaScript, JQuery, XML</p>
+  </div>
 
-  </body>
+  <div>
+    <h3>Soft skills</h3> 
+    <p>Communication, public speaking, documentation, statistical analysis</p>
+  </div>
+
+  <div>
+    <h3>Software</h3>
+    <p>Git, Github, Unix, Bash, Android Studio, Google Firebase</p>
+  </div>
+
+  <div>
+    <h3>Design</h3>
+    <p>Adobe Photoshop, Adobe Illustrator, Figma, Adobe XD</p>
+  </div>
+</section>
+
+<footer>
+  <h1><a href="contactme.html">Contact Me</a></h1>
+  <small>&copy; Copyright 2021, Isaac Bi</small>
+</footer>
+  </div>
+
+	<footer>
+    <h1><a href="contactme.html">Contact Me</a></h1>
+    <small>&copy; Copyright 2021, Isaac Bi</small>
+  </footer>
+</body>
 </html>
