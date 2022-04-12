@@ -1,14 +1,22 @@
 import type { NextPage } from 'next'
+import Hero from '../components/hero'
+import Layout from '../components/layout'
 import Head from 'next/head'
 import Image from 'next/image'
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    
+    <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Isaac Bi</title>
         <link rel="icon" href="/favicon.ico" />
+	      <meta name="description" content="Isaac Bi's Portfolio Website" />
+        <meta name="keywords" content="HTML, CSS, JavaScript, Tailwind, React, Next" />
+        <meta name="author" content="Isaac Bi" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
+      <Hero />
 
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
         <h1 className="text-6xl font-bold">
