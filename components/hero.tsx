@@ -1,38 +1,47 @@
+import { Bounce_button } from "./bounce_button"
+import Link from 'next/link'
+import Script from 'next/script'
+
 const Hero = () => {
     return (
-        <header>
-            <nav className="bg-white shadow dark:bg-gray-800">
-                <div className="container px-6 py-4 mx-auto">
-                    <div className="lg:flex lg:items-center lg:justify-between">
-                        <div className="flex items-center justify-between">
-                            <div className="text-xl font-semibold text-gray-700">
-                                <a className="text-2xl font-bold text-gray-800 dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300" href="#">Brand</a>
-                            </div>
-
-                            <div className="flex lg:hidden">
-                                <button type="button" className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
-                                    <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
-                                        <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
-                                    </svg>
-                                </button>
-                            </div>
+        <header className="bg-left bg-cover h-full pb-40 bg-opacity-50 bg-[url('/images/plain_banner.png')]">
+            <nav>
+                        <div className="flex items-center justify-end gap-x-10 pt-3 pr-10">
+                            <Link href="/">
+                                <a className="text-3xl text-gray-700 capitalize lg:mt-0 hover:text-orange-600">Home</a>
+                            </Link> 
+                            <a href="#biography_heading" className="text-3xl text-gray-700 capitalize lg:mt-0 hover:text-orange-600">About Me</a> 
+                            <a href="mailto: isaacb836@gmail.com" className="text-3xl text-gray-700 capitalize lg:mt-0 hover:text-orange-600">Contact Me</a> 
+                            <a href="/resume.pdf" className="flex justify-end text-3xl text-gray-700 capitalize lg:mt-0 hover:text-orange-600">Resume<img className="icon w-7" src="/images/icons/file.svg" alt="pdf file"/></a>
                         </div>
-
-                        <div className="hidden -mx-4 lg:flex lg:items-center">
-                            <a href="#" className="block mx-4 mt-2 text-sm text-gray-700 capitalize lg:mt-0 dark:text-gray-200 hover:text-blue-600 dark:hover:text-indigo-400">Web developers</a>
-                            <a href="#" className="block mx-4 mt-2 text-sm text-gray-700 capitalize lg:mt-0 dark:text-gray-200 hover:text-blue-600 dark:hover:text-indigo-400">Web Designers</a>
-                            <a href="#" className="block mx-4 mt-2 text-sm text-gray-700 capitalize lg:mt-0 dark:text-gray-200 hover:text-blue-600 dark:hover:text-indigo-400">UI/UX Designers</a>
-                            <a href="#" className="block mx-4 mt-2 text-sm text-gray-700 capitalize lg:mt-0 dark:text-gray-200 hover:text-blue-600 dark:hover:text-indigo-400">Contact</a>
-                        </div>
-                    </div>
-                </div>
             </nav>
-
-            <div className="w-full bg-center bg-cover h-[1080px]">
-                <div className="flex justify-center w-full h-full bg-opacity-50 bg-[url('../assets/images/plain_banner.png')] transition-opacity duration-1000 ease-out opacity-50 hover:opacity-100">
-                    <div className="text-center">
-                        <button className="w-full px-4 py-2 mt-4 text-sm font-medium text-white uppercase transition-colors duration-200 transform bg-blue-600 rounded-md lg:w-auto hover:bg-blue-500 focus:outline-none focus:bg-blue-500">View my projects</button>
-                    </div>
+           
+            <div className="flex justify-around w-full">
+                <div>
+                    <h1 className="mt-32 mb-10 text-8xl text-slate-900">
+                        Hello!
+                    </h1>
+                    <h2 className="mb-10 text-5xl font-bold text-slate-900 stroke-black">
+                        My name is Isaac Bi.
+                    </h2>
+                    <p className="text-3xl text-slate-900">
+                        Front-end Developer.
+                    </p>
+                    <p className="text-3xl text-slate-900">
+                        Back-end Developer.
+                    </p>
+                    <p className="text-3xl text-slate-900">
+                        Mobile Developer.
+                    </p>
+                    <p className="text-3xl text-slate-900">
+                        Musician.
+                    </p>
+                    <p className="text-3xl text-slate-900">
+                        Comedian.
+                    </p>
+                </div>
+                <div className="mt-32 w-96">
+                    <Bounce_button/>
                 </div>
             </div>
         </header>

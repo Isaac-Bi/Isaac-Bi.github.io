@@ -1,8 +1,12 @@
 import type { NextPage } from 'next'
 import Hero from '../components/hero'
-import Layout from '../components/layout'
+import Footer from '../components/footer'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
+import piggyBank from '../public/images/piggybank.png'
+import chronos from '../public/images/chronos.jpg'
+import quarantineApp from '../public/images/covid19.png'
 
 const Home: NextPage = () => {
   return (
@@ -11,6 +15,9 @@ const Home: NextPage = () => {
       <Head>
         <title>Isaac Bi</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"/>
 	      <meta name="description" content="Isaac Bi's Portfolio Website" />
         <meta name="keywords" content="HTML, CSS, JavaScript, Tailwind, React, Next" />
         <meta name="author" content="Isaac Bi" />
@@ -18,76 +25,108 @@ const Home: NextPage = () => {
       </Head>
       <Hero />
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
 
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
+      <main className="pt-20 pb-20 flex grow w-full flex-col items-center justify-center text-center">
+      <h3 className="text-3xl font-bold text-slate-900 pb-5" id="project_heading">My Projects</h3>
+      <section id="project" className="px-5 flex items-center gap-2 projects">
+          <div className="piggybank transition duration-300 hover:scale-125 hover:z-50"> \
+            <Link href="./piggybank">
+              <Image className="rounded-md"
+                src={piggyBank} 
+                alt = "Piggybank app logo"
+              />
+            </Link>
+          </div>
+          <div className="chronos transition duration-300 hover:scale-125 hover:z-50">
+            <a href="https://github.com/Isaac-Bi">
+              <Image className="rounded-md"
+                  src={chronos} 
+                  alt="Chronos app logo"
+                />
+            </a>
+          </div>
+          <div className="covid transition duration-300 hover:scale-125 hover:z-50">
+            <a href="https://github.com/Isaac-Bi/quarantine-app">
+              <Image className="rounded-md"
+                  src={quarantineApp} 
+                  alt="COVID Risk Factor app logo"
+                />
+            </a>
+          </div>
+      </section>
 
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <h2 id="biography_heading">Biography</h2>
+      <hr/>
+      <section className="biography">
+        <div>
+          <h3>Education and Experience</h3>
+          <picture>
+          <source media="(min-width:600px)" srcset="assets/images/warren.jpg"/>
+          <img src="assets/images/mobile/warrenmobile.jpg" alt="Balcony photograph of Warren College"/>
+          </picture>
         </div>
-      </main>
+        <p> 
+          I attend the University of California, San Diego pursuing a B.S in Computer Science. I'll be graduating in Spring of 2022. I have been working part time at my University's IT Service Desk since the start of my 
+          freshman year. I specialize in Front-End development and UI design, however I'm not afraid to get my hands dirty with nitty gritty frameworks, algorithms, and back-end software. 
+        </p>
+      </section>
 
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
-    </div>
+      <section className="biography">
+        <div>
+          <h3>Hobbies and Interests</h3>
+          <picture>
+            <source media="(min-width:600px)" srcset="assets/images/cliffs.jpg"/>
+            <img src="assets/images/mobile/cliffsmobile.jpg" alt="Landscape shot of La Jolla Cliffs"/>
+          </picture>
+        </div>
+        <p> 
+          I've been on the stage for a variety of reasons, whether it be for public speaking competitions, orchestral concerts, or theatrical productions, I simply love diving head first into anything that lets me show
+          off. The diversity of my interests has caused me to wear many hats. I'm a classically trained musician with a love for Jazz improvisation, I'm an excellent orator and debater (with a cheeky sense of humor), 
+          and I'm determined to earn a hat for artistic talent too later in my life. 
+        </p>
+      </section>
+
+      <section className="biography">
+        <div>
+          <h3>How are you managing during the pandemic?</h3>
+          <picture>
+            <source media="(min-width:600px)" srcset="assets/images/shanghai.jpg"/>
+            <img src="assets/images/mobile/shanghaimobile.jpg" alt="Image of Shanghai shopping center"/>
+          </picture>
+        </div>
+        <p> 
+          I've always thrived on consistent routines, so for me the pandemic hasn't been all too bad. Every morning is pretty much the same, but that also means I'm never really surprised by anything crazy. 
+          Keeping myself busy has been the main goal, and with my job and constant flow of CS assignments, keeping busy hasn't been difficult at all. 
+        </p>
+    </section>
+
+
+    <h2>Skills</h2>
+    <hr/>
+    <section className="skills">
+      <div>
+        <h3>Coding languages</h3> 
+        <p>C, C++, Java, Python, HTML, CSS, PHP, MySQL, JavaScript, JQuery, XML</p>
+      </div>
+
+      <div>
+        <h3>Soft skills</h3> 
+        <p>Communication, public speaking, documentation, statistical analysis</p>
+      </div>
+
+      <div>
+        <h3>Software</h3>
+        <p>Git, Github, Unix, Bash, Android Studio, Google Firebase</p>
+      </div>
+
+      <div>
+        <h3>Design</h3>
+        <p>Adobe Photoshop, Adobe Illustrator, Figma, Adobe XD</p>
+      </div>
+    </section>
+    </main>
+    <Footer/>
+  </div>
   )
 }
 

@@ -1,0 +1,316 @@
+/* Generic selectors */
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    color: #383838;
+}
+
+h2 {
+    font-family: "Open Sans", sans-serif;
+}
+
+h2+p{
+    max-width: 80%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    font-family: "Open Sans", sans-serif;
+    background-color: #f8F8f8;
+}
+
+/* Header CSS */
+
+header {
+    overflow:hidden;
+    height: 3em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header nav {
+    margin-right: 2.5em;
+}
+
+header nav a {
+    color: #383838;
+    padding: 0.5em;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5em;
+    transition: color 0.5s;
+}
+
+header nav a:hover {
+    color: #E39E22;
+}
+
+/* Class tags */
+
+.content_wrapper {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+/* The element to apply the animation to */
+/* The animation code */
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.banner {
+    background-image: url("../images/paint_banner.jpg");
+    height: 1080px;
+    padding: 0;
+    margin: 0;
+}
+
+.banner .view_button {
+    color: #383838;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 0.5em;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5em;
+    opacity: 0.9;
+    font-weight: bold;
+    border-style: solid;
+    border-width: 5px;
+    transition: color 1.5s;
+    transition: opacity 1.5s;
+    transition: background-color 0.5s;
+}
+
+.banner .view_button:hover {
+    background-color: #f06553;
+    border-color: #f06553;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.banner h2 {
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects div {
+    padding: 0.2em;
+}
+
+.projects img {
+    transition: opacity 1s;
+}
+
+.projects img:hover {
+    opacity: 0.4;
+}
+
+.projects h3 {
+    text-align: center;
+    margin-bottom: 0.2em;
+}
+
+.biography {
+    display: grid;
+    box-sizing: border-box;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.biography img {
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10%;
+}
+
+.biography div {
+    text-align: center;
+}
+
+.skills {
+    display: grid;
+    box-sizing: border-box;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.skills div {
+    margin: 0.5em;
+    padding: 1em;
+    border: 5px solid #383838;
+    background-color: #FFE9D6;
+    color: #383838;
+}
+
+.skills p {
+    color: #383838;
+}
+
+.icon {
+    display: inline-block;
+    width: 0.9em;
+    height: 0.9em;
+    overflow: hidden;
+}
+
+/* Footer CSS */
+
+footer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+footer h1 {
+    margin: 0;
+}
+
+footer h1 a {
+    font-family: "Open Sans", sans-serif;
+    color: #172634;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+footer h1 a:hover {
+    color: #E39E22;
+}
+
+footer small {
+    font-family: "Open Sans", sans-serif;
+    color: #383838;
+    font-size: 0.8rem;
+}
+
+/* On screens that are 768px wide or less remove the h1 title and make the links smaller font (tablet) */
+@media screen and (max-width: 768px) {
+    header {
+        overflow:hidden;
+        width: 100%;
+        justify-content: center;
+    }
+
+    header nav {
+        margin-right: 0;
+    }
+
+    header nav a {
+        font-size: 1.2rem;
+    }
+
+  
+    h1 {
+        display: none;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    h2+p{
+        max-width: 100%;
+    }
+    
+    .banner {
+        background-image: url("../images/paint_banner_ipad.jpg");
+        height: 1024px;
+    }
+
+    .banner .view_button {
+        margin-top: 12em;
+        color: white;
+        border-color:white;
+    }
+
+    .content_wrapper {
+    padding-left: 5%;
+    padding-right: 5%;
+    }
+
+    .biography {
+        grid-template-columns: auto;
+    }
+
+    .banner {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: auto;
+    }
+}
+
+/* On screens that are 600px wide or less remove the h1 title and make the links smaller font (mobile) */
+@media screen and (max-width: 600px) {
+    header {
+      overflow:hidden;
+      width: 100%;
+      justify-content: center;
+    }
+
+    header nav {
+        margin-right: 0;
+    }
+
+    header nav a {
+        font-size: 1.0rem;
+        font-weight: bold;
+    }
+
+    .banner{
+        background-image: url("../images/paint_banner_mobile.jpg");
+    }
+
+    .banner .view_button {
+        font-size: 1.0em;
+        margin: 0;
+        text-align: center;
+        color: #383838;;
+        border-color:#383838;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h2+p{
+        font-size: 1.0rem;
+    }
+
+    h3 {
+        text-align: center;
+    }
+  }
