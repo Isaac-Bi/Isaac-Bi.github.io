@@ -7,6 +7,10 @@ import Link from 'next/link'
 import piggyBank from '../public/images/piggybank.png'
 import chronos from '../public/images/chronos.jpg'
 import quarantineApp from '../public/images/covid19.png'
+import warren from '../public/images/warren.jpg'
+import cliffs from '../public/images/cliffs.jpg'
+import shanghai from '../public/images/shanghai.jpg'
+
 
 const Home: NextPage = () => {
   return (
@@ -16,7 +20,7 @@ const Home: NextPage = () => {
         <title>Isaac Bi</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"/>
 	      <meta name="description" content="Isaac Bi's Portfolio Website" />
         <meta name="keywords" content="HTML, CSS, JavaScript, Tailwind, React, Next" />
@@ -60,10 +64,10 @@ const Home: NextPage = () => {
       <section className="biography">
         <div>
           <h3>Education and Experience</h3>
-          <picture>
-          <source media="(min-width:600px)" srcset="assets/images/warren.jpg"/>
-          <img src="assets/images/mobile/warrenmobile.jpg" alt="Balcony photograph of Warren College"/>
-          </picture>
+          <Image className="rounded-md"
+                  src={warren}
+                  alt="Balcony photograph of Warren College"
+          />
         </div>
         <p> 
           I attend the University of California, San Diego pursuing a B.S in Computer Science. I'll be graduating in Spring of 2022. I have been working part time at my University's IT Service Desk since the start of my 
@@ -74,10 +78,10 @@ const Home: NextPage = () => {
       <section className="biography">
         <div>
           <h3>Hobbies and Interests</h3>
-          <picture>
-            <source media="(min-width:600px)" srcset="assets/images/cliffs.jpg"/>
-            <img src="assets/images/mobile/cliffsmobile.jpg" alt="Landscape shot of La Jolla Cliffs"/>
-          </picture>
+          <Image className="rounded-md"
+                  src={cliffs}
+                  alt="Landscape shot of La Jolla Cliffs"
+          />
         </div>
         <p> 
           I've been on the stage for a variety of reasons, whether it be for public speaking competitions, orchestral concerts, or theatrical productions, I simply love diving head first into anything that lets me show
@@ -89,10 +93,10 @@ const Home: NextPage = () => {
       <section className="biography">
         <div>
           <h3>How are you managing during the pandemic?</h3>
-          <picture>
-            <source media="(min-width:600px)" srcset="assets/images/shanghai.jpg"/>
-            <img src="assets/images/mobile/shanghaimobile.jpg" alt="Image of Shanghai shopping center"/>
-          </picture>
+          <Image className="rounded-md"
+                  src={shanghai}
+                  alt="Image of Shanghai shopping center"
+          />
         </div>
         <p> 
           I've always thrived on consistent routines, so for me the pandemic hasn't been all too bad. Every morning is pretty much the same, but that also means I'm never really surprised by anything crazy. 
